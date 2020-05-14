@@ -1,0 +1,16 @@
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      default-Zone: http://127.0.0.1:8761/eureka/
+spring:
+  application:
+    name: usian-item-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/usian?characterEncoding=UTF-8
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+

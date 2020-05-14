@@ -1,0 +1,11 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: common-eureka
+eureka:
+  client:
+    service-url:
+      default-Zone: http://127.0.0.1:${server.port}/eureka
+    register-with-eureka: false # 把自己注册到服务列表
+    fetch-registry: false # 拉取eureka服务信息
