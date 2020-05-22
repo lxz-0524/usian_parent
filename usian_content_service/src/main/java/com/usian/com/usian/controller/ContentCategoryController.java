@@ -40,4 +40,6 @@ public class ContentCategoryController {
     public Integer updateContentCategory(@RequestBody TbContentCategory tbContentCategory){
         return this.contentCategoryService.updateContentCategory(tbContentCategory);
     }
+
+
 }

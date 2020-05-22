@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/backend/item")
 public class ItemWebController {
@@ -59,6 +61,24 @@ public class ItemWebController {
             return Result.ok();
         }
         return Result.error("添加失败");
+    }
+
+    @RequestMapping("/preUpdateItem")
+    public Result preUpdateItem(Long itemId){
+        Map<String,Object> updateRes =itemServiceFeignClient.preUpdateItem(itemId);
+        if (updateRes.size()>0){
+            return Result.ok(updateRes);
+        }
+        return Result.error("查无结果");
+    }
+
+    @RequestMapping("/updateTbItem")
+    public Result updateTbItem(TbItem tbItem){
+        Integer updateNum = itemServiceFeignClient.updateTbItem(tbItem);
+        if (updateNum==1){
+            return Result.ok();
+        }
+        return Result.error("修改失败");
     }
 
     @RequestMapping("/deleteItemById")

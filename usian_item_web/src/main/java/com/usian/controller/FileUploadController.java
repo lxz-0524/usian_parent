@@ -46,7 +46,7 @@ public class FileUploadController {
             String last = StringUtils.substringAfterLast(filename, ".");
             StorePath storePath = fastFileStorageClient.uploadFile(file.getInputStream(),file.getSize(),last,null);
             //4、返回图片的url   http://image.usian.com.+返回的路径
-            System.out.println("http://image.usian.com/"+storePath.getFullPath());
+           // System.out.println("http://image.usian.com/"+storePath.getFullPath());
             return Result.ok("http://image.usian.com/"+storePath.getFullPath());
         } catch (IOException e) {
             e.printStackTrace();

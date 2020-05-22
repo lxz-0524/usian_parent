@@ -2,10 +2,7 @@ package com.usian.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.usian.mapper.TbItemDescMapper;
-import com.usian.mapper.TbItemMapper;
-import com.usian.mapper.TbItemParamItemMapper;
-import com.usian.mapper.TbItemParamMapper;
+import com.usian.mapper.*;
 import com.usian.pojo.*;
 import com.usian.utils.IDUtils;
 import com.usian.utils.PageResult;
@@ -14,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -22,6 +21,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private TbItemMapper tbItemMapper ;
+
+    @Autowired
+    private TbItemCatMapper tbItemCatMapper ;
 
     @Autowired
     private TbItemDescMapper tbItemDescMapper ;
@@ -92,6 +94,36 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public Integer deleteItemById(Long id) {
         return tbItemMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public Map<String,Object> preUpdateItem(Long itemId) {
+        Map<String, Object> map = new HashMap<>();
+        //根据商品 ID 查询商品
+        TbItem item = this.tbItemMapper.selectByPrimaryKey(itemId);
+        map.put("item", item);
+        //根据商品 ID 查询商品描述
+        TbItemDesc itemDesc = this.tbItemDescMapper.selectByPrimaryKey(itemId);
+        map.put("itemDesc", itemDesc.getItemDesc());
+        //根据商品 ID 查询商品类目
+        TbItemCat itemCat = this.tbItemCatMapper.selectByPrimaryKey(item.getCid());
+        map.put("itemCat", itemCat.getName());
+        //根据商品 ID 查询商品规格参数
+        TbItemParamItemExample example = new TbItemParamItemExample();
+        TbItemParamItemExample.Criteria criteria = example.createCriteria();
+        criteria.andItemIdEqualTo(itemId);
+        List<TbItemParamItem> list =
+                this.tbItemParamItemMapper.selectByExampleWithBLOBs(example);
+        if (list != null && list.size() > 0) {
+            map.put("itemParamItem", list.get(0).getParamData());
+        }
+        return map ;
+    }
+
+    @Override
+    public Integer updateTbItem(TbItem tbItem) {
+
+        return tbItemMapper.updateByPrimaryKeySelective(tbItem);
     }
 
 }

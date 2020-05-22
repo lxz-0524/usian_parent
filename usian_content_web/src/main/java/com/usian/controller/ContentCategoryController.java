@@ -42,7 +42,7 @@ public class ContentCategoryController {
 
     @RequestMapping("/deleteContentCategoryById")
     public Result deleteContentCategoryById(Long categoryId){
-        System.out.println("categoryId: "+categoryId);
+        //System.out.println("categoryId: "+categoryId);
         Integer status = contentServiceFeign.deleteContentCategoryById(categoryId);
         if (status==200){
             return Result.ok();
