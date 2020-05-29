@@ -4,9 +4,11 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.usian.mapper.*;
 import com.usian.pojo.*;
+import com.usian.redis.RedisClient;
 import com.usian.utils.IDUtils;
 import com.usian.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,6 +32,12 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private TbItemParamItemMapper tbItemParamItemMapper ;
+
+    @Autowired
+    private RedisClient redisClient ;
+
+    @Value("${portal_itemresult_redis_key}")
+    private String portal_itemresult_redis_key ;
 
     /***
      * 根据id查询商品信息
@@ -55,8 +63,12 @@ public class ItemServiceImpl implements ItemService {
         TbItemExample.Criteria criteria = example.createCriteria();
         criteria.andStatusEqualTo((byte)1);
         List<TbItem> tbItems =this.tbItemMapper.selectByExample(example);
-        PageInfo<TbItem> pageInfo = new PageInfo<>(tbItems);
         PageResult result = new PageResult();
+        PageInfo<TbItem> pageInfo = (PageInfo<TbItem>)redisClient.get(portal_itemresult_redis_key);
+        if (pageInfo==null){
+            pageInfo = new PageInfo<>(tbItems);
+            redisClient.set(portal_itemresult_redis_key,pageInfo);
+        }
         result.setPageIndex(page);
         result.setTotalPage(pageInfo.getTotal());
         result.setResult(tbItems);

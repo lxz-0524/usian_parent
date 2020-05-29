@@ -36,6 +36,8 @@ public class ItemServiceController {
      */
     @RequestMapping("/selectTbItemAllByPage")
     public PageResult selectTbItemAllByPage(@RequestParam(defaultValue = "1")Integer page,@RequestParam(defaultValue = "3")Integer rows){
+        // String phoneString = (String)redisTemplate.boundHashOps("phoneList").get(model.getId() + model.getModelname() + pageNum + pageSize);
+
        return itemService.selectTbItemAllByPage(page,rows) ;
     }
 

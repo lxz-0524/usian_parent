@@ -80,7 +80,7 @@ public interface ItemServiceFeignClient {
     Map<String,Object> preUpdateItem(@RequestParam Long itemId);
 
     @RequestMapping("/service/item/updateTbItem")
-     Integer updateTbItem(@RequestBody TbItem tbItem);
+    Integer updateTbItem(@RequestBody TbItem tbItem);
 
 
     /**

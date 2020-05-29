@@ -7,16 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common_eureka" />
-        <module name="usian_item_web" />
         <module name="common_utils" />
-        <module name="usian_item_feign" />
-        <module name="usian_content_web" />
-        <module name="common_pojo" />
-        <module name="common_mapper" />
         <module name="usian_content_service" />
+        <module name="usian_content_feign" />
+        <module name="common_redis" />
+        <module name="usian_content_web" />
+        <module name="usian_item_web" />
+        <module name="common_mapper" />
+        <module name="usian_item_feign" />
+        <module name="common_pojo" />
         <module name="usian_item_service" />
         <module name="usian_portal_web" />
-        <module name="usian_content_feign" />
       </profile>
     </annotationProcessing>
   </component>
@@ -25,6 +26,7 @@
       <module name="common_eureka" options="-parameters" />
       <module name="common_mapper" options="-parameters" />
       <module name="common_pojo" options="-parameters" />
+      <module name="common_redis" options="-parameters" />
       <module name="common_utils" options="-parameters" />
       <module name="usian_content_feign" options="-parameters" />
       <module name="usian_content_service" options="-parameters" />
