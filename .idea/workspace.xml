@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common_redis/common_redis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common_redis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common_redis/src/main/java/com/usian/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java" afterDir="false" />
+    <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="增加功能：商城首页菜单缓存到Redis">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_feign/src/main/java/com/usian/feign/ItemServiceFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_feign/src/main/java/com/usian/feign/ItemServiceFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemCatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemCatServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/controller/ItemServiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/controller/ItemServiceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_content_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,62 +52,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemCatServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_redis/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/config/RedisConfig.java">
+        <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-720">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian_portal_web/src/main/java/com/usian/controller/ItemCategoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,13 +74,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemCatServiceController.java">
+        <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -161,7 +104,6 @@
         <option value="$PROJECT_DIR$/usian_item_web/pom.xml" />
         <option value="$PROJECT_DIR$/usian_item_web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_item_web/src/test/java/com/usian/test/FastDFSTest.java" />
-        <option value="$PROJECT_DIR$/usian_content_service/pom.xml" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/ContentServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/usian_content_feign/pom.xml" />
@@ -187,12 +129,10 @@
         <option value="$PROJECT_DIR$/usian_portal_web/src/main/java/com/usian/controller/ItemCategoryController.java" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/com/usian/controller/ContentCategoryController.java" />
         <option value="$PROJECT_DIR$/common_utils/src/main/java/com/usian/utils/AdNode.java" />
-        <option value="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_portal_web/src/main/java/com/usian/controller/ContentController.java" />
         <option value="$PROJECT_DIR$/usian_content_feign/src/main/java/com/usian/ContentServiceFeign.java" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/com/usian/controller/ContentController.java" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentService.java" />
-        <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/TbItem.java" />
         <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java" />
         <option value="$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/ItemWebController.java" />
@@ -206,6 +146,9 @@
         <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java" />
         <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/common_redis/pom.xml" />
+        <option value="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian_content_service/pom.xml" />
+        <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -262,8 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,10 +212,57 @@
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="usian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="usian" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,10 +391,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ContentWebApp" />
-        <item itemvalue="Spring Boot.PortalWebApp" />
         <item itemvalue="Spring Boot.ContentServiceApp" />
+        <item itemvalue="Spring Boot.ContentWebApp" />
         <item itemvalue="Spring Boot.ItemWebApp" />
+        <item itemvalue="Spring Boot.PortalWebApp" />
         <item itemvalue="Spring Boot.ItemServiceApp" />
       </list>
     </recent_temporary>
@@ -430,7 +418,8 @@
       <workItem from="1590418751950" duration="131000" />
       <workItem from="1590452523558" duration="5797000" />
       <workItem from="1590538498003" duration="3233000" />
-      <workItem from="1590572534612" duration="2017000" />
+      <workItem from="1590572534612" duration="7010000" />
+      <workItem from="1590922436767" duration="250000" />
     </task>
     <task id="LOCAL-00001" summary="发布项目到github">
       <created>1589441466509</created>
@@ -453,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590155129834</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加功能：商城首页菜单缓存到Redis">
+      <created>1590740510716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590740510716</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -477,12 +473,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128700000" />
+    <option name="totallyTimeSpent" value="133943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17167382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20225322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -506,7 +503,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3153153" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.27477476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -526,7 +523,8 @@
     <MESSAGE value="发布项目到github" />
     <MESSAGE value="完善商品增删改查，商品类目增删改查，图片上传，内容的分类管理等功能" />
     <MESSAGE value="增加广告查询、添加、删除等功能，完善商品修改功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加广告查询、添加、删除等功能，完善商品修改功能" />
+    <MESSAGE value="增加功能：商城首页菜单缓存到Redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加功能：商城首页菜单缓存到Redis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -553,13 +551,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/usian_content_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -739,38 +730,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_portal_web/src/main/java/com/usian/controller/ItemCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common_utils/src/main/java/com/usian/utils/AdNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentService.java">
@@ -929,20 +891,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_content_web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -997,11 +951,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/config/RedisConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="730">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="40" column="21" selection-start-line="35" selection-start-column="8" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_content_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_portal_web/src/main/java/com/usian/controller/ItemCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>

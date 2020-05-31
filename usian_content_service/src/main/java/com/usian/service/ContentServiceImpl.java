@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.usian.mapper.TbContentMapper;
 import com.usian.pojo.TbContent;
 import com.usian.pojo.TbContentExample;
+import com.usian.redis.RedisClient;
 import com.usian.utils.AdNode;
 import com.usian.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,12 @@ public class ContentServiceImpl implements ContentService {
 
     @Value("${AD_WIDTHB}")
     private Integer AD_WIDTHB;
+
+    @Value("${PORTAL_AD_KEY}")
+    private String PORTAL_AD_KEY ;
+
+    @Autowired
+    private RedisClient redisClient ;
     @Override
     public PageResult selectTbContentAllByCategoryId(Integer page, Integer rows, Long categoryId) {
         PageHelper.startPage(page,rows);
@@ -56,16 +63,28 @@ public class ContentServiceImpl implements ContentService {
     public Integer insertTbContent(TbContent tbContent) {
         tbContent.setCreated(new Date());
         tbContent.setUpdated(new Date());
-        return tbContentMapper.insertSelective(tbContent);
+        Integer num = tbContentMapper.insertSelective(tbContent);
+        redisClient.hdel(PORTAL_AD_KEY,AD_CATEGORY_ID.toString());
+        return num;
     }
 
     @Override
     public Integer deleteContentByIds(Long ids) {
-        return tbContentMapper.deleteByPrimaryKey(ids);
+        Integer dnum = tbContentMapper.deleteByPrimaryKey(ids);
+        redisClient.hdel(PORTAL_AD_KEY,AD_CATEGORY_ID.toString());
+        return dnum;
     }
 
     @Override
     public List<AdNode> selectFrontendContentByAD() {
+
+        //从redis缓存获取key对应的数据
+        List<AdNode> adNodeListRedis = (List<AdNode>) redisClient.hget(PORTAL_AD_KEY, AD_CATEGORY_ID.toString());
+        if (adNodeListRedis!=null){
+            //如果redis缓存中获取的数据不为空，则直接返回缓存中的值；
+            return adNodeListRedis ;
+        }
+        //如果缓存中获取到的值为空，则从数据库获取数据并保存到redis中
         TbContentExample contentExample = new TbContentExample();
         TbContentExample.Criteria criteria = contentExample.createCriteria();
         criteria.andCategoryIdEqualTo(AD_CATEGORY_ID);
@@ -82,6 +101,8 @@ public class ContentServiceImpl implements ContentService {
             adNode.setWidthB(AD_WIDTHB);
             adNodeList.add(adNode);
         }
+        //将数据库获取到的数据，保存到redis中
+        redisClient.hset(PORTAL_AD_KEY,AD_CATEGORY_ID.toString(),adNodeList);
         return adNodeList ;
     }
 }
