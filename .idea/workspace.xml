@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="增加功能：商城首页菜单缓存到Redis">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/任务总结.text" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_content_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-720">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="1530">
+              <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -76,8 +73,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="30">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/任务总结.text">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="594" lean-forward="true" selection-start-line="594" selection-end-line="594" />
             </state>
           </provider>
         </entry>
@@ -98,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/ItemCatWebController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/config/FastClientImporter.java" />
         <option value="$PROJECT_DIR$/usian_item_web/pom.xml" />
@@ -149,6 +154,7 @@
         <option value="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_content_service/pom.xml" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/任务总结.text" />
       </list>
     </option>
   </component>
@@ -205,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,56 +219,10 @@
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_content_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -275,7 +236,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springdata_redis" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -419,7 +380,11 @@
       <workItem from="1590452523558" duration="5797000" />
       <workItem from="1590538498003" duration="3233000" />
       <workItem from="1590572534612" duration="7010000" />
-      <workItem from="1590922436767" duration="250000" />
+      <workItem from="1590922436767" duration="1091000" />
+      <workItem from="1590984863194" duration="606000" />
+      <workItem from="1591083893681" duration="689000" />
+      <workItem from="1591086698681" duration="28000" />
+      <workItem from="1591157173335" duration="6679000" />
     </task>
     <task id="LOCAL-00001" summary="发布项目到github">
       <created>1589441466509</created>
@@ -449,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590740510716</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加功能：商城首页大广告信息缓存到Redis功能，及缓存同步功能">
+      <created>1590922938369</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590922938369</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -473,13 +445,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133943000" />
+    <option name="totallyTimeSpent" value="142786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20225322" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21298283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -497,13 +469,13 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005365" side_tool="true" weight="0.27364865" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32995495" />
       <window_info anchor="bottom" id="Problems" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.27477476" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.49946353" visible="true" weight="0.27364865" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -524,7 +496,8 @@
     <MESSAGE value="完善商品增删改查，商品类目增删改查，图片上传，内容的分类管理等功能" />
     <MESSAGE value="增加广告查询、添加、删除等功能，完善商品修改功能" />
     <MESSAGE value="增加功能：商城首页菜单缓存到Redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加功能：商城首页菜单缓存到Redis" />
+    <MESSAGE value="增加功能：商城首页大广告信息缓存到Redis功能，及缓存同步功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加功能：商城首页大广告信息缓存到Redis功能，及缓存同步功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -551,13 +524,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_content_feign/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -982,8 +948,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="1530">
+          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -999,8 +965,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="30">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/任务总结.text">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="594" lean-forward="true" selection-start-line="594" selection-end-line="594" />
         </state>
       </provider>
     </entry>
