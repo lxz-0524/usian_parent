@@ -644,3 +644,489 @@
                     searchSourceBuilder.query(boolQueryBuilder);
                     searchRequest.source(searchSourceBuilder);
                     searchResponse = restHighLevelClient.search(searchRequest,RequestOptions.DEFAULT);
+
+2020-06-04:
+    一、highlight查询
+        高亮显示：高亮不是搜索条件，是显示逻辑，在搜索的时候，经常需要对条件实现高亮显示(如特殊字段、关键词标红等)
+        api：
+            GET /java1906/course/_search
+                {
+                  "query": {
+                    "multi_match": {
+                      "query": "开发",
+                      "fields": ["name","description"]
+                    }
+                  },
+                  "highlight": {
+                    "pre_tags": ["<red>"],
+                    "post_tags": ["</red>"],
+                    "fields": {
+                      "name": {}
+                    }
+                  }
+                }
+
+            java clent：
+                查询：
+                  @Test
+                  public void testHighLightQuery() throws Exception {
+                      SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+                      searchSourceBuilder.query(QueryBuilders.matchQuery("name", "spring"));
+                      //设置高亮
+                      HighlightBuilder highlightBuilder = new HighlightBuilder();
+                      highlightBuilder.preTags("<red>");
+                      highlightBuilder.postTags("</red>");
+                      highlightBuilder.fields().add(new HighlightBuilder.Field("name"));
+                      searchSourceBuilder.highlighter(highlightBuilder);
+                      searchRequest.source(searchSourceBuilder);
+                      searchResponse = restHighLevelClient.search(searchRequest,RequestOptions.DEFAULT);
+                }
+                遍历：
+                     @After
+                    public void displayDoc() {
+                        SearchHits searchHits = searchResponse.getHits();
+                        long totalHits = searchHits.getTotalHits();
+                        System.out.println("共搜索到" + totalHits + "条文档");
+                        SearchHit[] hits = searchHits.getHits();
+                        for (int i = 0; i < hits.length; i++) {
+                            SearchHit hit = hits[i];
+                            String id = hit.getId();
+                            System.out.println("id：" + id);
+                            String source = hit.getSourceAsString();
+                            System.out.println(source);
+                    高亮查询遍历：
+                            Map<String, HighlightField> highlightFields = hit.getHighlightFields();
+                            if (highlightFields != null) {
+                                HighlightField highlightField = highlightFields.get("name");
+                                Text[] fragments = highlightField.getFragments();
+                                System.out.println("高亮字段：" + fragments[0].toString());
+                            }
+                        }
+                    }
+        集群管理：
+            ES通常以集群方式工作，这样做不仅能够提高 ES的搜索能力还可以处理大数据搜索的能力，同时也增加了系统的
+            容错能力及高可用。
+
+            添加文档过程：
+            （1）假设用户把请求发给了节点1
+            （2）系统通过余数算法得知这个’文档’应该属于主分片2，于是请求被转发到保存该主分片的节点3
+            （3）系统把文档保存在节点3的主分片2中，然后将请求转发至其他两个保存副本的节点
+
+            查询文档过程：
+            （1） 请求被发给了节点1
+            （2）节点1计算出该数据属于主分片2，这时候，有三个选择，分别是位于节点1的副本2， 节点2的副本2，节点3
+                      的主分片2， 假设节点1负载均衡，采用轮询的方式，选中了节点2，把请求转发。
+            （3） 节点2把数据返回给节点1， 节点1 最后返回给客户端。
+
+            集群的三个角色：
+                主节点：master节点主要用于集群的管理及索引比如新增节点、分片分配、索引的新增和删除等。
+                数据节点：data 节点上保存了数据分片，它负责索引和搜索操作。
+                客户端节点：client节点仅作为负载均衡器不存数据，只是将请求均衡转发到其它节点。
+            通过下边两项参数来配置节点的功能：
+                node.master: #是否允许为主节点
+                node.data: #允许存储数据作为数据节点
+                node.ingest: #是否允许成为协调节点，
+
+            创建结点2：
+                1、拷贝节点elasticsearch-1
+                2、修改elasticsearch.yml内容如下：
+                    discovery.zen.ping.unicast.hosts: ["192.168.233.134:9300", "192.168.233.135:9300"]
+                    启动之前，要删除节点中的data文件夹；
+                    启动之前，要删除节点中的data文件夹；
+                    启动之前，要删除节点中的data文件夹；
+                3、测试：查询当前集群的健康信息：GET _cluster/health
+                    status：用三种颜色来展示健康状态
+                           green：索引库的每个 primary shard 和 replica shard 都是 active 的
+                           yellow：索引库的每个 primary shard 都是 active 的，但部分的 replica shard 不是 active 的
+                           red：不是所有的索引都是 primary shard 都是 active 状态的。
+    商品搜索：
+        搜索展示的商品信息：
+            对应的业务域：
+            	1、商品Id  2、商品标题  3、商品卖点  4、商品价格  5、商品图片  6、分类名称  7、商品描述
+            需要从tb_item, tb_item_cat, tb_item_desc表中查询商品数据：
+                sql语句：SELECT
+                      	a.id,
+                      	a.title item_title,
+                      	a.sell_point item_sell_point,
+                      	a.price item_price,
+                      	a.image item_image,
+                      	b.name item_category_name,
+                      	c.item_desc item_desc
+                      FROM
+                      	tb_item a
+                      JOIN tb_item_cat b ON a.cid = b.id
+                      JOIN tb_item_desc c ON a.id = c.item_id
+                      WHERE
+                      	a.status = 1
+                对应业务域api：
+                    POST /usian/item/_mapping
+                    {
+                      "_source": {
+                        "excludes": [
+                          "item_desc"
+                        ]
+                      },
+                      "properties": {
+                        "item_title": {
+                          "type": "text",
+                          "analyzer": "ik_max_word",
+                          "search_analyzer": "ik_smart"
+                        },
+                        "item_sell_point": {
+                          "type": "text",
+                          "analyzer": "ik_max_word",
+                          "search_analyzer": "ik_smart"
+                        },
+                        "item_price": {
+                          "type": "float"
+                        },
+                        "item_image": {
+                          "type": "text",
+                          "index": false
+                        },
+                        "item_category_name": {
+                          "type": "text",
+                          "analyzer": "ik_max_word",
+                          "search_analyzer": "ik_smart"
+                        },
+                        "item_desc": {
+                          "type": "text",
+                          "analyzer": "ik_max_word",
+                          "search_analyzer": "ik_smart"
+                        }
+                      }
+                    }
+            创建工程：
+                在usian_parent中创建模块
+                    创建usian_search_service
+                    pom.xml
+                         <dependency>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-starter-web</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.springframework.cloud</groupId>
+                            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.usian</groupId>
+                            <artifactId>common_mapper</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.usian</groupId>
+                            <artifactId>common_utils</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.elasticsearch.client</groupId>
+                            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.elasticsearch</groupId>
+                            <artifactId>elasticsearch</artifactId>
+                        </dependency>
+                    application.yml:
+                        spring:
+                          application:
+                            name: usian-search-service
+                          datasource:
+                            driver-class-name: com.mysql.jdbc.Driver
+                            url: jdbc:mysql://127.0.0.1:3306/usian?characterEncoding=UTF-8
+                            username: root
+                            password:
+                            type: com.alibaba.druid.pool.DruidDataSource
+                        server:
+                          port: 8095
+                        eureka:
+                          client:
+                            service-url:
+                              defaultZone: http://127.0.0.1:8761/eureka/
+                    logback.xml
+                    启动类：
+                        @SpringBootApplication
+                        @EnableDiscoveryClient
+                        @MapperScan("com.usian.mapper")
+                        public class SearchServiceApp {
+                            public static void main(String[] args) {
+                                SpringApplication.run(SearchServiceApp.class, args);
+                            }
+                        }
+                创建usian_search_feign
+                    pom.xml:
+                         <dependency>
+                            <groupId>org.springframework.cloud</groupId>
+                            <artifactId>spring-cloud-starter-openfeign</artifactId>
+                        </dependency>
+                        <!--utils -->
+                        <dependency>
+                            <groupId>com.usian</groupId>
+                            <artifactId>common_utils</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.usian</groupId>
+                            <artifactId>common_pojo</artifactId>
+                            <version>1.0-SNAPSHOT</version>
+                        </dependency>
+                创建usian_search_web
+                    pom.xml:
+                     <dependency>
+                        <groupId>com.usian</groupId>
+                        <artifactId>usian_search_feign</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-web</artifactId>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                    </dependency>
+                application.yml:
+                    spring:
+                      application:
+                        name: usian-search-web
+                    server:
+                      port: 8096
+                    eureka:
+                      client:
+                        service-url:
+                          defaultZone: http://127.0.0.1:8761/eureka/
+                    #全局配置
+                    #请求连接的超时时间
+                    ribbon:
+                      ConnectTimeout: 60000
+                    #请求处理的超时时间
+                      ReadTimeout: 60000
+                logback.xml
+                启动类：
+                    @SpringBootApplication
+                    @EnableFeignClients
+                    @EnableDiscoveryClient
+                    public class SearchWebApp {
+                        public static void main(String[] args) {
+                            SpringApplication.run(SearchWebApp.class, args);
+                        }
+                    }
+
+        导入商品数据到索引库
+            usian-manage-web工程：
+                修改src\api\base.js：
+                    baseSearchUrl:"/search_api"
+                    importAll:"/frontend/searchItem/importAll" // 一键导入商品数据到索引库
+                修改src\api\index.js：
+                    /**
+                     * 一键导入商品数据到索引库
+                     */
+                    getImportAll(){
+                        return axios.post(base.baseSearchUrl + base.importAll,null,{timeout:50000});
+                    }
+                修改src\pages\Product\ProductList\index.vue：
+                    <div>
+                    	<el-button type="primary" @click="addProduct">添加商品</el-button>
+                    	<el-button type="primary" @click="importAll">一键导入商品</el-button>
+                    </div>
+
+                    /**
+                     * 一键导入商品数据到索引库
+                     */
+                    importAll() {
+                        this.$api.getImportAll().then(res => {
+                            if (res.data.status == 200) {
+                                this.$message({
+                                type: "success",
+                                message: "导入成功!"
+                                });
+                            } else {
+                                 this.$message({
+                                 type: "error",
+                                 message: "导入失败!"
+                                 });
+                             }
+                         });
+                    }
+                修改vue.config.js：
+                    '/search_api': {
+                        	target: 'http://127.0.0.1:8096',
+                            // target: 'http://121.42.14.194:9021',
+                            pathRewrite: {
+                                '^/search_api': ''
+                            },
+                            changeOrigin: true
+                    }
+
+            common_pojo：
+                创建pojo:
+                    public class SearchItem implements Serializable {
+                    	private String id;
+                    	private String item_title;
+                    	private String item_sell_point;
+                    	private String item_price;
+                    	private String item_image;
+                    	private String item_category_name;
+                    	private String item_desc;
+
+            common_mapper:
+                public interface SearchItemMapper {
+                    List<SearchItem> getItemList();
+                }
+                SearchItemMapper.xml:
+                    <mapper namespace="com.usian.mapper.SearchItemMapper" >
+                        <select id="getItemList" resultType="com.usian.pojo.SearchItem">
+                    		SELECT
+                    			a.id,
+                    			a.title item_title,
+                    			a.sell_point item_sell_point,
+                    			a.price item_price,
+                    			a.image item_image,
+                    			b.name item_category_name,
+                    			c.item_desc item_desc
+                    		FROM
+                    			tb_item a
+                    		JOIN tb_item_cat b ON a.cid = b.id
+                    		JOIN tb_item_desc c ON a.id = c.item_id
+                    		WHERE
+                    			a.status = 1
+                    	</select>
+            usian_search_service:
+                application.yml
+                    spring:
+                      data:
+                        elasticsearch:
+                          cluster-nodes: 192.168.157.139:9200,192.168.157.140:9200
+                    #索引名称
+                    ES_INDEX_NAME: usian
+                    #类型名称
+                    ES_TYPE_NAME: item
+                config:
+                    @Configuration
+                    public class ElasticsearchConfig extends ElasticsearchProperties{
+                    	@Bean
+                    	public RestHighLevelClient getRestHighLevelClient() {
+                    			String[] hosts = getClusterNodes().split(",");
+                    			HttpHost[] httpHosts = new HttpHost[hosts.length];
+                    			for (int i = 0; i < httpHosts.length; i++) {
+                    				String h = hosts[i];
+                    				httpHosts[i] = new HttpHost(h.split(":")[0],
+                                                                Integer.parseInt(h.split(":")[1]));
+                    			}
+                    		return new RestHighLevelClient(RestClient.builder(httpHosts));
+                    	}
+                    }
+                service:
+                    @Service
+                    @Transactional
+                    public class SearchItemServiceImpl implements SearchItemService{
+
+                        @Autowired
+                        private SearchItemMapper searchItemMapper;
+
+                        @Autowired
+                        private RestHighLevelClient restHighLevelClient;
+
+                        @Value("${ES_INDEX_NAME}")
+                        private String ES_INDEX_NAME;
+
+                        @Value("${ES_TYPE_NAME}")
+                        private String ES_TYPE_NAME;
+
+                        @Override
+                        public Boolean importAll() {
+                            try {
+                                if(!isExistsIndex()){
+                                    createIndex();
+                                }
+                                int page=1;
+                                while (true){
+                                    /**分页每次导入一千条*/
+                                    PageHelper.startPage(page,1000);
+                                    //1、查询mysql中的商品信息
+                                    List<SearchItem> esDocumentList = searchItemMapper.getItemList();
+                                    if(esDocumentList==null || esDocumentList.size()==0){
+                                        break;
+                                    }
+                                    BulkRequest bulkRequest = new BulkRequest();
+                                    for (int i = 0; i < esDocumentList.size(); i++) {
+                                        SearchItem searchItem =  esDocumentList.get(i);
+                                        //2、把商品信息添加到es中
+                                        bulkRequest.add(new IndexRequest(ES_INDEX_NAME, ES_TYPE_NAME).
+                                            source(JsonUtils.objectToJson(searchItem), XContentType.JSON));
+                                    }
+                                    restHighLevelClient.bulk(bulkRequest, RequestOptions.DEFAULT);
+                                    page++;
+                                }
+                                return true;
+                            }catch (Exception e){
+                                e.printStackTrace();
+                                return false;
+                            }
+                        }
+
+                        /**
+                         * 索引库是否存在
+                         * @return
+                         * @throws IOException
+                         */
+                        private boolean isExistsIndex() throws IOException {
+                            GetIndexRequest request = new GetIndexRequest();
+                            request.indices(ES_INDEX_NAME);
+                            return restHighLevelClient.indices().exists(request, RequestOptions.DEFAULT);
+                        }
+
+                        /**
+                         * 创建索引库
+                         * @return
+                         * @throws IOException
+                         */
+                        private boolean createIndex() throws IOException {
+                            //创建索引请求对象，并设置索引名称
+                            CreateIndexRequest createIndexRequest = new CreateIndexRequest(ES_INDEX_NAME);
+                            //设置索引参数
+                            createIndexRequest.settings(Settings.builder().put("number_of_shards",2)
+                                                        				.put("number_of_replicas",1));
+                            createIndexRequest.mapping(ES_TYPE_NAME, "将上面761行中对应业务域api中的内容复制到此处 ", XContentType.JSON);
+                            //创建索引操作客户端
+                            IndicesClient indices = restHighLevelClient.indices();
+
+                            //创建响应对象
+                            CreateIndexResponse createIndexResponse =
+                                indices.create(createIndexRequest,RequestOptions.DEFAULT);
+                            //得到响应结果
+                            return createIndexResponse.isAcknowledged();
+                        }
+                    }
+                controller：
+                    @RestController
+                    @RequestMapping("/service/searchItem")
+                    public class SearchItemController {
+                        @Autowired
+                        private SearchItemService searchItemService;
+                        @RequestMapping("/importAll")
+                        public boolean importAll(){
+                            return searchItemService.importAll();
+                        }
+                    }
+
+            usian_search_feign
+                @FeignClient("usian-search-service")
+                public interface SearchItemFeign {
+                    @RequestMapping("/importAll")
+                    public Boolean importAll();
+                }
+
+            usian_search_web：
+                @RestController
+                @RequestMapping("/frontend/searchItem")
+                public class SearchItemController {
+                    @Autowired
+                    private SearchItemFeign searchItemFeign;
+                    @RequestMapping("/importAll")
+                    public boolean importAll(){
+                        return searchItemFeign.importAll();
+                    }
+                }
+
+            测试：启动eureka、usian_search_service、usian_search_web、usian_manage_web，
+                  进入manage.usian.com，点击一键导入商品，检查是否导入成功
