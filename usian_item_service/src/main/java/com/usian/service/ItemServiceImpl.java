@@ -7,11 +7,11 @@ import com.usian.pojo.*;
 import com.usian.redis.RedisClient;
 import com.usian.utils.IDUtils;
 import com.usian.utils.PageResult;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +35,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private RedisClient redisClient ;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate ;
 
     @Value("${portal_itemresult_redis_key}")
     private String portal_itemresult_redis_key ;
@@ -84,6 +87,7 @@ public class ItemServiceImpl implements ItemService {
         tbItem.setCreated(date);
         tbItem.setStatus((byte)1);
         tbItem.setUpdated(date);
+        //tbItem.setPrice(tbItem.getPrice()*100);
         Integer tbItemNum = tbItemMapper.insertSelective(tbItem);
 
         //补齐商品描述对象
@@ -100,6 +104,8 @@ public class ItemServiceImpl implements ItemService {
         tbItemParamItem.setCreated(date);
         tbItemParamItem.setUpdated(date);
         Integer itemPatamItemNum = tbItemParamItemMapper.insertSelective(tbItemParamItem);
+        //发送mq，完成索引库同步
+        amqpTemplate.convertAndSend("item_exchange","item.add",itemId);
         return tbItemNum+descNum+itemPatamItemNum;
     }
 

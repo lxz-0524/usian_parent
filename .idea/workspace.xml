@@ -2,33 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/SearchItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_feign/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_feign/usian_search_feign.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/SearchServiceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/config/ElasticsearchConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_service/usian_search_service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/SearchWebApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_search_web/usian_search_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/listener/SearchMQListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务总结.text" beforeDir="false" afterPath="$PROJECT_DIR$/任务总结.text" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,80 +66,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/任务总结.text">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="1098" column="21" lean-forward="true" selection-start-line="1098" selection-start-column="21" selection-end-line="1098" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/jiyun/mavenRepo/org/springframework/spring-core/5.1.8.RELEASE/spring-core-5.1.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-468">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="66">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,8 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentCategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/usian_content_web/src/main/java/com/usian/controller/ContentCOntroller.java" />
         <option value="$PROJECT_DIR$/usian_portal_web/pom.xml" />
         <option value="$PROJECT_DIR$/usian_portal_web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_portal_web/src/main/resources/logback.xml" />
@@ -198,31 +118,33 @@
         <option value="$PROJECT_DIR$/usian_content_web/src/main/java/com/usian/controller/ContentController.java" />
         <option value="$PROJECT_DIR$/usian_item_feign/src/main/java/com/usian/feign/ItemServiceFeignClient.java" />
         <option value="$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemCatServiceImpl.java" />
         <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/common_redis/pom.xml" />
         <option value="$PROJECT_DIR$/usian_content_service/pom.xml" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian/service/ContentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/usian_search_service/pom.xml" />
         <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/SearchServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_search_feign/pom.xml" />
         <option value="$PROJECT_DIR$/usian_search_web/pom.xml" />
         <option value="$PROJECT_DIR$/usian_search_web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/SearchWebApp.java" />
         <option value="$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/SearchItem.java" />
-        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java" />
-        <option value="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java" />
-        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java" />
-        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java" />
-        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml" />
         <option value="$PROJECT_DIR$/usian_content_service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/config/ElasticsearchConfig.java" />
-        <option value="$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java" />
-        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/任务总结.text" />
+        <option value="$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java" />
+        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java" />
+        <option value="$PROJECT_DIR$/usian_search_service/pom.xml" />
+        <option value="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/listener/SearchMQListener.java" />
+        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java" />
+        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java" />
+        <option value="$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian_item_service/pom.xml" />
+        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml" />
+        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java" />
       </list>
     </option>
   </component>
@@ -253,12 +175,7 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common_redis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common_redis" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="usian_item_service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -279,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,12 +204,56 @@
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="usian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_search_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="usian" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,7 +266,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/usian_content_service/src/main/java/com/usian" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../usian-portal-web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -353,33 +315,7 @@
     </option>
     <option name="contentProportion" value="0.15043764" />
   </component>
-  <component name="RunManager" selected="Spring Boot.SearchWebApp">
-    <configuration name="ContentServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="usian_content_service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.usian.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.ContentServiceApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContentWebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="usian_content_web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.usian.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.ContentWebApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ItemWebApp">
     <configuration name="EurekaApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="common_eureka" />
       <extension name="coverage">
@@ -393,15 +329,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="usian_search_service" />
+    <configuration name="ItemServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="usian_item_service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.usian.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.SearchServiceApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.ItemServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemWebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="usian_item_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.usian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.ItemWebApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortalWebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="usian_portal_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.usian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.usian.PortalWebApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -421,11 +383,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SearchServiceApp" />
+        <item itemvalue="Spring Boot.ItemServiceApp" />
+        <item itemvalue="Spring Boot.ItemWebApp" />
+        <item itemvalue="Spring Boot.PortalWebApp" />
         <item itemvalue="Spring Boot.SearchWebApp" />
         <item itemvalue="Spring Boot.EurekaApp" />
-        <item itemvalue="Spring Boot.ContentServiceApp" />
-        <item itemvalue="Spring Boot.ContentWebApp" />
       </list>
     </recent_temporary>
   </component>
@@ -454,7 +416,8 @@
       <workItem from="1591083893681" duration="689000" />
       <workItem from="1591086698681" duration="28000" />
       <workItem from="1591157173335" duration="8486000" />
-      <workItem from="1591259843081" duration="11565000" />
+      <workItem from="1591259843081" duration="21459000" />
+      <workItem from="1591330399277" duration="9000000" />
     </task>
     <task id="LOCAL-00001" summary="发布项目到github">
       <created>1589441466509</created>
@@ -498,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591193190800</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1、添加了将msq中商品信息导入到ES中；&#10;2、完善6-4日记">
+      <created>1591283330152</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591283330152</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -522,13 +492,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156158000" />
+    <option name="totallyTimeSpent" value="175052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21566524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21888413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -552,7 +522,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.49946353" visible="true" weight="0.41666666" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.49946353" visible="true" weight="0.3828829" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -575,7 +545,8 @@
     <MESSAGE value="增加功能：商城首页菜单缓存到Redis" />
     <MESSAGE value="增加功能：商城首页大广告信息缓存到Redis功能，及缓存同步功能" />
     <MESSAGE value="添加了任务总结日志text文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了任务总结日志text文件" />
+    <MESSAGE value="1、添加了将msq中商品信息导入到ES中；&#10;2、完善6-4日记" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、添加了将msq中商品信息导入到ES中；&#10;2、完善6-4日记" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -600,47 +571,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java</url>
-          <line>43</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java</url>
-          <line>77</line>
+          <line>86</line>
           <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java</url>
-          <line>88</line>
+          <line>87</line>
           <properties />
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/TbItemCat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/TbItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/ItemCatWebController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="718">
@@ -648,23 +598,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/FileUploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/ItemWebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -759,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemCatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -773,23 +699,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -807,13 +716,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="40" column="21" selection-start-line="35" selection-start-column="8" selection-end-line="40" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -845,13 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -942,27 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbContentCategoryMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -977,16 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/config/ElasticsearchConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,75 +875,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/任务总结.text">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="901" column="40" lean-forward="true" selection-start-line="901" selection-start-column="40" selection-end-line="901" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="270">
+          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java">
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/config/ElasticsearchConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state relative-caret-position="330">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/jiyun/mavenRepo/org/springframework/spring-core/5.1.8.RELEASE/spring-core-5.1.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="162">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jiyun/mavenRepo/org/springframework/spring-aop/5.1.8.RELEASE/spring-aop-5.1.8.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="472" selection-start-line="472" selection-end-line="472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-200">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="250">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/任务总结.text">
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="1098" column="21" lean-forward="true" selection-start-line="1098" selection-start-column="21" selection-end-line="1098" selection-end-column="21" />
+        <state relative-caret-position="730">
+          <caret line="137" column="57" selection-start-line="137" selection-start-column="57" selection-end-line="137" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/SearchItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/ItemWebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/listener/SearchMQListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/controller/SearchItemServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="106" column="22" lean-forward="true" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_web/src/main/java/com/usian/config/FastClientImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
