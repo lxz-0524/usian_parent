@@ -112,6 +112,7 @@ public class SearchItemServiceImpl implements SearchItemService {
           SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
           SearchHits searchHits = searchResponse.getHits();
           SearchHit[] hits = searchHits.getHits();
+          //返回结果
           List<SearchItem> searchItemList = new ArrayList<SearchItem>();
           for (int i = 0 ;i<hits.length;i++){
               SearchHit hit = hits[i];

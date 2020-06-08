@@ -33,6 +33,18 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private TbItemParamItemMapper tbItemParamItemMapper ;
 
+    @Value("${ITEM_INFO}")
+    private String ITEM_INFO;
+
+    @Value("${BASE}")
+    private String BASE;
+
+    @Value("${DESC}")
+    private String DESC;
+
+    @Value("${ITEM_INFO_EXPIRE}")
+    private Integer ITEM_INFO_EXPIRE;
+
     @Autowired
     private RedisClient redisClient ;
 
@@ -42,6 +54,12 @@ public class ItemServiceImpl implements ItemService {
     @Value("${portal_itemresult_redis_key}")
     private String portal_itemresult_redis_key ;
 
+    @Value("${SETNX_BASE_LOCK_KEY}")
+    private String SETNX_BASE_LOCK_KEY ;
+
+    @Value("${SETNX_DESC_LOCK_KEY}")
+    private String SETNX_DESC_LOCK_KEY ;
+
     /***
      * 根据id查询商品信息
      * @param itemId
@@ -49,7 +67,79 @@ public class ItemServiceImpl implements ItemService {
      */
     @Override
     public TbItem selectItemInfo(Long itemId) {
-        return tbItemMapper.selectByPrimaryKey(itemId) ;
+        //查询缓存
+        TbItem tbItem =(TbItem) redisClient.get(ITEM_INFO + ":" + itemId + ":" + BASE);
+        if (tbItem!=null){
+            return tbItem ;
+        }
+        /********************解决缓存击穿************************/
+        if (redisClient.setnx(SETNX_BASE_LOCK_KEY+":"+itemId,itemId,30)){
+            tbItem = tbItemMapper.selectByPrimaryKey(itemId);
+            /********************解决缓存穿透************************/
+            if(tbItem == null){
+                //把空对象保存到缓存
+                redisClient.set(ITEM_INFO + ":" + itemId + ":"+ BASE,tbItem);
+                //设置缓存的有效期
+                redisClient.expire(ITEM_INFO + ":" + itemId + ":"+ BASE,30);
+            }
+            //把数据库查询到的数据缓存到redis
+            redisClient.set(ITEM_INFO + ":" + itemId + ":" + BASE,tbItem);
+            //设置缓存有效期
+            redisClient.expire(ITEM_INFO + ":" + itemId + ":" + BASE,ITEM_INFO_EXPIRE);
+            redisClient.del(SETNX_BASE_LOCK_KEY+":"+itemId);
+            return tbItem;
+        }else {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return selectItemInfo(itemId);
+        }
+    }
+
+    /**
+     * 根据商品id查询商品描述信息
+     * @param itemId
+     * @return
+     */
+
+    @Override
+    public TbItemDesc selectItemDescByItemId(Long itemId){
+        //查询缓存
+        TbItemDesc tbItemDesc = (TbItemDesc) redisClient.get(ITEM_INFO + ":" + itemId + ":" + DESC);
+        if (tbItemDesc!=null){
+            return tbItemDesc ;
+        }
+        /***************************解决缓存击穿*******************************/
+        if (redisClient.setnx(SETNX_DESC_LOCK_KEY+":"+itemId,itemId,30)){
+            TbItemDescExample tbItemDescExample = new TbItemDescExample();
+            TbItemDescExample.Criteria criteria = tbItemDescExample.createCriteria();
+            criteria.andItemIdEqualTo(itemId);
+            List<TbItemDesc> descList = tbItemDescMapper.selectByExampleWithBLOBs(tbItemDescExample);
+            if (descList!=null&& descList.size()>0){
+                //把数据缓存到redis
+                redisClient.set(ITEM_INFO + ":" + itemId + ":" + DESC,descList.get(0));
+                //设置缓存有效时间
+                redisClient.expire(ITEM_INFO + ":" + itemId + ":" + DESC,ITEM_INFO_EXPIRE);
+                return descList.get(0);
+            }
+            /********************解决缓存穿透************************/
+            //把空对象保存到缓存
+            redisClient.set(ITEM_INFO + ":" + itemId + ":"+ DESC,null);
+            //设置缓存的有效期
+            redisClient.expire(ITEM_INFO + ":" + itemId + ":"+ DESC,30);
+            redisClient.del(SETNX_DESC_LOCK_KEY+":"+itemId);
+            return tbItemDesc ;
+        }else {
+            //获取锁失败
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return selectItemDescByItemId(itemId);
+        }
     }
 
     /**
@@ -111,6 +201,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public Integer deleteItemById(Long id) {
+        redisClient.del(ITEM_INFO + ":" + id + ":" + DESC);
         return tbItemMapper.deleteByPrimaryKey(id);
     }
 
@@ -140,7 +231,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public Integer updateTbItem(TbItem tbItem) {
-
+        redisClient.del(ITEM_INFO + ":" + tbItem.getId() + ":" + DESC);
         return tbItemMapper.updateByPrimaryKeySelective(tbItem);
     }
 

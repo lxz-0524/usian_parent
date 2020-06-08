@@ -3,10 +3,8 @@ package com.usian.redis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -267,6 +265,22 @@ public class RedisClient {
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
+        }
+    }
+
+    /**
+     * 分布式锁
+     * @param key
+     * @param time
+     * @param value
+     * @return
+     */
+    public Boolean setnx(String key, Object value, long time) {
+        try {
+            return redisTemplate.opsForValue().setIfAbsent(key, value, time, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 
