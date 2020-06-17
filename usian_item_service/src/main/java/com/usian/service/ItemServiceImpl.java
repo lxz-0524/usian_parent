@@ -33,6 +33,9 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private TbItemParamItemMapper tbItemParamItemMapper ;
 
+    @Autowired
+    private TbOrderItemMapper tbOrderItemMapper ;
+
     @Value("${ITEM_INFO}")
     private String ITEM_INFO;
 
@@ -140,6 +143,29 @@ public class ItemServiceImpl implements ItemService {
             }
             return selectItemDescByItemId(itemId);
         }
+    }
+
+    /**
+     * 修改商品库存数量
+     * @param orderId
+     * @return
+     */
+    @Override
+    public Integer updateTbItemByOrderId(String orderId) {
+        TbOrderItemExample example = new TbOrderItemExample();
+        TbOrderItemExample.Criteria criteria = example.createCriteria();
+        criteria.andOrderIdEqualTo(orderId);
+        List<TbOrderItem> tbOrderItemList = tbOrderItemMapper.selectByExample(example);
+        int result = 0 ;
+        for (TbOrderItem tbOrderItem :tbOrderItemList){
+            //通过订单中商品id，查询到商品信息
+            TbItem tbItem = tbItemMapper.selectByPrimaryKey(Long.valueOf(tbOrderItem.getItemId()));
+            //修改商品库存数量
+            tbItem.setNum(tbItem.getNum()-tbOrderItem.getNum());
+            //修改商品信息
+            result += tbItemMapper.updateByPrimaryKeySelective(tbItem);
+        }
+        return result ;
     }
 
     /**

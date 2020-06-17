@@ -14,8 +14,13 @@ public class OrderServiceController {
     @Autowired
     private OrderService orderService ;
 
+    /**
+     * 创建订单
+     * @param orderInfo
+     * @return
+     */
     @RequestMapping("/insertOrder")
-    public Long insertOrder(@RequestBody OrderInfo orderInfo){
+    public String insertOrder(@RequestBody OrderInfo orderInfo){
         return orderService.insertOrder(orderInfo);
     }
 }

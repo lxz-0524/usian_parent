@@ -2,47 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a945418-7a13-47f6-a079-2a121e8199b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/OrderInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_feign/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_feign/src/main/java/com/usian/CartServiceFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/CartServiceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/controller/CartServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/service/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_service/usian_cart_service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/src/main/java/com/usian/CartWebApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/src/main/java/com/usian/controller/CartWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_cart_web/usian_cart_web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_feign/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_feign/usian_order_feign.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/OrderServiceApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_service/usian_order_service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/OrderWebApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/config/OrderWebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/interceptor/UserLoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/usian_order_web/usian_order_web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/listener/ItemMQListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/config/QuartzConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/factory/MyAdaptableJobFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/quartz/OrderQuartz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/target/classes/com/usian/mapper/TbOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/target/classes/com/usian/mapper/TbOrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_mapper/target/classes/com/usian/mapper/TbOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common_mapper/target/classes/com/usian/mapper/TbOrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/usian_item_service/target/classes/com/usian/service/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,50 +81,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/interceptor/UserLoginInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/config/OrderWebConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="352">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#595#596#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,8 +97,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="570">
+              <caret line="77" column="60" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+              <folding>
+                <element signature="e#2956#2957#0" expanded="true" />
+                <element signature="e#2983#2984#0" expanded="true" />
+                <element signature="e#3138#3139#0" expanded="true" />
+                <element signature="e#3164#3165#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/quartz/OrderQuartz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="712">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/factory/MyAdaptableJobFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/config/QuartzConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/listener/ItemMQListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,15 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/usian_detail_web/src/main/java/com/usian/controller/DetailController.java" />
-        <option value="$PROJECT_DIR$/usian_item_feign/src/main/java/com/usian/feign/ItemServiceFeignClient.java" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/controller/ItemServiceController.java" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" />
-        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemParamServiceImpl.java" />
-        <option value="$PROJECT_DIR$/usian_sso_service/pom.xml" />
-        <option value="$PROJECT_DIR$/usian_sso_feign/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/usian_sso_feign/src/main/java/com/usian/SSOServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_sso_service/src/main/java/usian/SSOServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_sso_service/src/main/java/com/usian/SSOServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_sso_feign/pom.xml" />
@@ -213,7 +207,6 @@
         <option value="$PROJECT_DIR$/usian_cart_feign/src/main/java/com/usian/CartServiceFeign.java" />
         <option value="$PROJECT_DIR$/usian_cart_web/src/main/java/com/usian/controller/CartWebController.java" />
         <option value="$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/controller/CartServiceController.java" />
-        <option value="$PROJECT_DIR$/usian_order_service/pom.xml" />
         <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/OrderServiceApp.java" />
         <option value="$PROJECT_DIR$/usian_order_feign/pom.xml" />
         <option value="$PROJECT_DIR$/usian_order_web/src/main/resources/application.yml" />
@@ -222,14 +215,24 @@
         <option value="$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/usian_order_web/pom.xml" />
         <option value="$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/OrderInfo.java" />
-        <option value="$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java" />
-        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java" />
         <option value="$PROJECT_DIR$/common_redis/src/main/java/com/usian/redis/RedisClient.java" />
-        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java" />
-        <option value="$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java" />
         <option value="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/config/OrderWebConfig.java" />
+        <option value="$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java" />
+        <option value="$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java" />
+        <option value="$PROJECT_DIR$/usian_sso_service/pom.xml" />
+        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/listener/ItemMQListener.java" />
+        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.java" />
+        <option value="$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/usian_order_service/pom.xml" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/quartz/OrderQuartz.java" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/factory/MyAdaptableJobFactory.java" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/config/QuartzConfig.java" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -292,6 +295,17 @@
             <path>
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_item_service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="usian_item_service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
               <item name="usian_order_service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,25 +328,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -342,75 +337,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="usian" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
               <item name="usian_order_service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usian" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usian_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="usian_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="usian_order_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -550,10 +481,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.OrderServiceApp" />
+        <item itemvalue="Spring Boot.SSOWebApp" />
         <item itemvalue="Spring Boot.CartWebApp" />
         <item itemvalue="Spring Boot.DetailWebApp" />
         <item itemvalue="Spring Boot.PortalWebApp" />
-        <item itemvalue="Spring Boot.SSOWebApp" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +516,7 @@
       <workItem from="1591259843081" duration="21459000" />
       <workItem from="1591330399277" duration="10423000" />
       <workItem from="1591382408214" duration="68482000" />
-      <workItem from="1592230523167" duration="14236000" />
+      <workItem from="1592230523167" duration="28753000" />
     </task>
     <task id="LOCAL-00001" summary="发布项目到github">
       <created>1589441466509</created>
@@ -657,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591695483921</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1、完成登录及未登录两种情况下购物车添加商品功能；&#10;2、完成查看购物车功能；&#10;3、完成修改购物车商品数量，删除商品的功能；&#10;4、完成点击结算时的登录验证拦截及展示确认订单功能。">
+      <created>1592301760743</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592301760744</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -681,13 +619,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259193000" />
+    <option name="totallyTimeSpent" value="273710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.222103" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.222103" />
+      <window_info id="Structure" order="1" sideWeight="0.50177306" side_tool="true" weight="0.222103" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -710,7 +648,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.49946353" visible="true" weight="0.36486486" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.49946353" visible="true" weight="0.43693694" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -737,7 +675,8 @@
     <MESSAGE value="1、增加商品搜索功能；&#10;2、完成添加商品以后的ES中索引同步功能" />
     <MESSAGE value="1、搜索商品详情；&#10;2、完成热门商品详情的缓存同步" />
     <MESSAGE value="1、完成单点登录及注册；&#10;2、登录以后显示用户名；&#10;3、退出登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、完成单点登录及注册；&#10;2、登录以后显示用户名；&#10;3、退出登录" />
+    <MESSAGE value="1、完成登录及未登录两种情况下购物车添加商品功能；&#10;2、完成查看购物车功能；&#10;3、完成修改购物车商品数量，删除商品的功能；&#10;4、完成点击结算时的登录验证拦截及展示确认订单功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、完成登录及未登录两种情况下购物车添加商品功能；&#10;2、完成查看购物车功能；&#10;3、完成修改购物车商品数量，删除商品的功能；&#10;4、完成点击结算时的登录验证拦截及展示确认订单功能。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -802,129 +741,16 @@
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/usian_sso_feign/src/main/java/com/usian/feign/SSOServiceFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_sso_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="30" selection-start-line="30" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_web/src/main/java/com/usian/controller/SearchItemWebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_feign/src/main/java/com/usian/feign/SearchItemFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/java/com/usian/service/SearchItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1424">
-          <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian.java" />
-    <entry file="file://$PROJECT_DIR$/usian_cart_service/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_web/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_feign/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="40" column="21" selection-start-line="12" selection-start-column="3" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1250">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_web/src/main/java/com/usian/CartWebApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_service/src/main/java/com/usian/CartServiceApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_cart_web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -939,13 +765,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_cart_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -990,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1034,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common_pojo/src/main/java/com/usian/pojo/SearchItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1070,23 +875,6 @@
             <element signature="e#796#797#0" expanded="true" />
             <element signature="e#850#851#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1127,49 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1200,10 +949,216 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_sso_service/src/main/java/com/usian/service/SSOServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2764">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/config/OrderWebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="420">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_web/src/main/java/com/usian/controller/OrderWebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="51" column="54" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_feign/src/main/java/com/usian/feign/OrderServiceFeign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_search_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_sso_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_cart_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_cart_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_sso_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1402">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/service/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="167" column="23" lean-forward="true" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="404" column="10" lean-forward="true" selection-start-line="404" selection-start-column="10" selection-end-line="404" selection-end-column="10" />
+          <folding>
+            <element signature="e#15600#15604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_mapper/src/main/java/com/usian/mapper/TbOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/quartz/OrderQuartz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/factory/MyAdaptableJobFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/config/QuartzConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/controller/OrderServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_order_service/src/main/java/com/usian/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="77" column="60" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+          <folding>
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#2983#2984#0" expanded="true" />
+            <element signature="e#3138#3139#0" expanded="true" />
+            <element signature="e#3164#3165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usian_item_service/src/main/java/com/usian/listener/ItemMQListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

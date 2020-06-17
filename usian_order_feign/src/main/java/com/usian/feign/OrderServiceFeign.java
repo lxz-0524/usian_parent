@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface OrderServiceFeign {
 
     @RequestMapping("/service/order/insertOrder")
-    public Long insertOrder(OrderInfo orderInfo) ;
+    public String insertOrder(OrderInfo orderInfo) ;
 }

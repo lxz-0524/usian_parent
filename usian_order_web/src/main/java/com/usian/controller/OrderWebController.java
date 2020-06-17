@@ -49,7 +49,7 @@ public class OrderWebController {
         orderInfo.setOrderItem(orderItem);
         orderInfo.setTbOrderShipping(tbOrderShipping);
         orderInfo.setTbOrder(tbOrder);
-        Long orderId = orderServiceFeign.insertOrder(orderInfo);
+        String orderId = orderServiceFeign.insertOrder(orderInfo);
         if (orderId!=null){
             return Result.ok(orderId);
         }

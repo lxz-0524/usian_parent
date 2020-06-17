@@ -1,19 +1,17 @@
 package com.usian.service;
 
+import com.usian.mapper.TbItemMapper;
 import com.usian.mapper.TbOrderItemMapper;
 import com.usian.mapper.TbOrderMapper;
 import com.usian.mapper.TbOrderShippingMapper;
-import com.usian.pojo.OrderInfo;
-import com.usian.pojo.TbOrder;
-import com.usian.pojo.TbOrderItem;
-import com.usian.pojo.TbOrderShipping;
+import com.usian.pojo.*;
 import com.usian.redis.RedisClient;
 import com.usian.utils.JsonUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Date;
 import java.util.List;
 
@@ -29,6 +27,10 @@ public class OrderServiceImpl implements OrderService {
     private TbOrderShippingMapper orderShippingMapper;
     @Autowired
     private RedisClient redisClient;
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+    @Autowired
+    private TbItemMapper itemMapper ;
 
     @Value("${ORDER_ID_KEY}")
     private String ORDER_ID_KEY;
@@ -40,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
     private String ORDER_ITEM_ID_KEY;
 
     @Override
-    public Long insertOrder(OrderInfo orderInfo) {
+    public String insertOrder(OrderInfo orderInfo) {
         /************1、向订单表插入数据。********/
         TbOrder tbOrder = orderInfo.getTbOrder();
         if (!redisClient.keys(ORDER_ID_KEY)){
@@ -71,7 +73,56 @@ public class OrderServiceImpl implements OrderService {
         tbOrderShipping.setCreated(date);
         tbOrderShipping.setUpdated(date);
         orderShippingMapper.insertSelective(tbOrderShipping);
+
+        //发布消息到mq，完成扣减库存
+        amqpTemplate.convertAndSend("order_exchange","order.add", orderId);
         //返回订单id
-        return orderId;
+        return orderId.toString();
+    }
+
+
+    /**
+     * 查询超时订单
+     * @return
+     */
+    @Override
+    public List<TbOrder> selectOvertimeOrder() {
+        return orderMapper.selectOvertimeOrder();
+    }
+
+    /**
+     * 关闭超时订单
+     * @param tbOrder
+     */
+    @Override
+    public void closeTimeOutOrder(TbOrder tbOrder) {
+        orderMapper.updateByPrimaryKeySelective(tbOrder);
+    }
+
+    /**
+     * 根据订单id查询订单明细
+     * @param orderId
+     * @return
+     */
+    @Override
+    public List<TbOrderItem> selectOrderItemByOrderId(String orderId) {
+        TbOrderItemExample tbOrderItemExample = new TbOrderItemExample();
+        TbOrderItemExample.Criteria criteria = tbOrderItemExample.createCriteria();
+        criteria.andOrderIdEqualTo(orderId);
+        List<TbOrderItem> list = orderItemMapper.selectByExample(tbOrderItemExample);
+        return list;
+    }
+
+    /**
+     * 把删除的超时订单中商品数量加回去
+     * @param itemId
+     * @param num
+     */
+    @Override
+    public void addItemNum(String itemId, Integer num) {
+        TbItem tbItem = itemMapper.selectByPrimaryKey(Long.valueOf(itemId));
+        //修改回原来库存数量
+        tbItem.setNum(tbItem.getNum()+num);
+        itemMapper.updateByPrimaryKeySelective(tbItem);
     }
 }

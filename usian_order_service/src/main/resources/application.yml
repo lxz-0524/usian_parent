@@ -13,7 +13,26 @@ spring:
     username: root
     password:
     type: com.alibaba.druid.pool.DruidDataSource
-
+  rabbitmq:
+      host: 192.168.157.132
+      port: 5672
+      username: admin
+      password: 1111
+      virtual-host: /
+  redis:
+    cluster:
+      nodes:
+        - 192.168.157.137:7001
+        - 192.168.157.137:7002
+        - 192.168.157.137:7003
+        - 192.168.157.137:7004
+        - 192.168.157.137:7005
+        - 192.168.157.137:7006
+    jedis:
+      pool:
+        max-active: 20 #连接池最大连接数
+        max-idle: 10 #连接池中的最大空闲连接
+        min-idle: 5 # 连接池中的最小空闲连接
 #订单
 ORDER_ID_KEY: ORDER_ID_KEY
 ORDER_ID_BEGIN: 100544
