@@ -8,8 +8,6 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.JobDetailFactoryBean;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
-import java.util.concurrent.Callable;
-
 //Quartz配置类
 @Configuration
 public class QuartzConfig  {
@@ -28,8 +26,8 @@ public class QuartzConfig  {
     public CronTriggerFactoryBean cronTriggerFactoryBean(JobDetailFactoryBean jobDetailFactoryBean){
         CronTriggerFactoryBean triggerFactoryBean = new CronTriggerFactoryBean();
         triggerFactoryBean.setJobDetail(jobDetailFactoryBean.getObject());
-        //设置触发时间
-        triggerFactoryBean.setCronExpression("0 */1 * * * ?");
+        //设置触发时间  每分钟执行一次
+        triggerFactoryBean.setCronExpression("0 */1 * * * ?");//设置cron语句
         return triggerFactoryBean ;
     }
 
@@ -40,8 +38,8 @@ public class QuartzConfig  {
         SchedulerFactoryBean factoryBean = new SchedulerFactoryBean();
         //关联trigger
         factoryBean.setTriggers(cronTriggerFactoryBean.getObject());
+        //将OrderQuartz实例化，并放入到spring容器中
         factoryBean.setJobFactory(myAdaptableJobFactory);
         return factoryBean ;
     }
-
 }

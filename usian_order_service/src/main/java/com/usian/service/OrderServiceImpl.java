@@ -96,6 +96,10 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public void closeTimeOutOrder(TbOrder tbOrder) {
+        tbOrder.setStatus(6);
+        tbOrder.setUpdateTime(new Date());
+        tbOrder.setEndTime(new Date());
+        tbOrder.setCloseTime(new Date());
         orderMapper.updateByPrimaryKeySelective(tbOrder);
     }
 
