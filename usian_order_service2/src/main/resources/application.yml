@@ -1,5 +1,5 @@
 server:
-  port: 8102
+  port: 8202
 eureka:
   client:
     service-url:
@@ -19,8 +19,6 @@ spring:
       username: admin
       password: 1111
       virtual-host: /
-      publisher-confirms: true #开启消息确认机制
-      publisher-returns: true #开启发送失败退回
   redis:
     cluster:
       nodes:

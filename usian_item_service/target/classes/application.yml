@@ -33,6 +33,9 @@ spring:
     username: admin
     password: 1111
     virtual-host: /
+    listener:
+      direct:
+        acknowledge-mode: manual
 #配置缓存首页商品分类的 key
 portal_catresult_redis_key: portal_catresult_redis_key
 
