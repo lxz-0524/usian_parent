@@ -22,19 +22,20 @@ public class MQSender implements ReturnCallback ,ConfirmCallback{
     private AmqpTemplate amqpTemplate ;
 
     public void sendMessage(LocalMessage localMessage){
-        RabbitTemplate rabbbitTemplate = (RabbitTemplate)this.amqpTemplate;
-        rabbbitTemplate.setMandatory(true);//设置为true，保证消息消费失败后继续回调再次发送
-        rabbbitTemplate.setConfirmCallback(this);//确认回调
-        rabbbitTemplate.setReturnCallback(this);//失败退回
-        //用于确认之后更改本地消息状态或删除本地消息--根据本地消息id
+        RabbitTemplate rabbitTemplate = (RabbitTemplate)this.amqpTemplate;
+        rabbitTemplate.setMandatory(true);//设置为true，保证消息消费失败后继续回调再次发送
+        rabbitTemplate.setConfirmCallback(this);//确认回调
+        rabbitTemplate.setReturnCallback(this);//失败退回
+        //关联数据，用于确认之后更改本地消息状态或删除本地消息--根据本地消息id
         CorrelationData correlationData = new CorrelationData(localMessage.getTxNo());
-        rabbbitTemplate.convertAndSend("order_exchange","order.add",
+        rabbitTemplate.convertAndSend("order_exchange","order.add",
                                         JsonUtils.objectToJson(localMessage),correlationData);
     }
 
     @Override//确认回调
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         String id = correlationData.getId();
+        System.out.println("ack:"+ack);
         if (ack){
             //消息发送成功，则更新本地消息为已发送成功或者直接删除该本地消息记录
             LocalMessage localMessage = localMessageMapper.selectByPrimaryKey(id);

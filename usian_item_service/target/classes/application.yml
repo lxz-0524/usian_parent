@@ -9,9 +9,9 @@ spring:
     name: usian-item-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/usian?characterEncoding=UTF-8
+    url: jdbc:mysql://192.168.157.144:8066/usian?characterEncoding=UTF-8
     username: root
-    password:
+    password: 1111
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     cluster:
@@ -35,6 +35,8 @@ spring:
     virtual-host: /
     listener:
       direct:
+        acknowledge-mode: manual
+      simple:
         acknowledge-mode: manual
 #配置缓存首页商品分类的 key
 portal_catresult_redis_key: portal_catresult_redis_key

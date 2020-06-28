@@ -5,10 +5,7 @@ import com.usian.pojo.TbItemDesc;
 import com.usian.service.ItemService;
 import com.usian.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -38,7 +35,6 @@ public class ItemServiceController {
     @RequestMapping("/selectTbItemAllByPage")
     public PageResult selectTbItemAllByPage(@RequestParam(defaultValue = "1")Integer page,@RequestParam(defaultValue = "3")Integer rows){
         // String phoneString = (String)redisTemplate.boundHashOps("phoneList").get(model.getId() + model.getModelname() + pageNum + pageSize);
-
        return itemService.selectTbItemAllByPage(page,rows) ;
     }
 

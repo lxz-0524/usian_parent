@@ -1,8 +1,11 @@
 package com.usian.quartz;
 
+import com.usian.mq.MQSender;
+import com.usian.pojo.LocalMessage;
 import com.usian.pojo.TbOrder;
 import com.usian.pojo.TbOrderItem;
 import com.usian.redis.RedisClient;
+import com.usian.service.LocalMessageService;
 import com.usian.service.OrderService;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -20,6 +23,11 @@ public class OrderQuartz implements Job {
     @Autowired
     private RedisClient redisClient ;
 
+    @Autowired
+    private LocalMessageService localMessageService ;
+
+    @Autowired
+    private MQSender mqSender ;
     /**
      * 关闭超时订单
      * @param jobExecutionContext
@@ -46,6 +54,10 @@ public class OrderQuartz implements Job {
                 for (TbOrderItem orderItem:orderItemList) {
                     orderService.addItemNum(orderItem.getItemId(),orderItem.getNum());
                 }
+            }
+            List<LocalMessage> localMessageList = localMessageService.selectLocalMessageByStatus(0);
+            for (LocalMessage msg:localMessageList) {
+                mqSender.sendMessage(msg);
             }
             //删除释放分布式锁  避免造成死锁
             redisClient.del("SETNX_ORDER_LOCK_KEY");
